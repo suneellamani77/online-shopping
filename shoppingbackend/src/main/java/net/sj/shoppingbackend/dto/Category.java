@@ -1,7 +1,12 @@
 package net.sj.shoppingbackend.dto;
 
+import javax.persistence.*;
+
+@Entity
 public class Category {
 	
+	@Id
+	@GeneratedValue
 	private int id;
 	private String name;
 	private String description;
@@ -30,12 +35,6 @@ public class Category {
 	}
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
-	}
-	public boolean isActive() {
-		return active;
-	}
-	public void setActive(boolean active) {
-		this.active = active;
 	}
 	
 	

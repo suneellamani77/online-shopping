@@ -1,7 +1,5 @@
 package net.sj.onlineshopping.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -76,5 +74,24 @@ public class PageController {
 		return mv;
 	}
 	
+	
+	@RequestMapping(value={"/saveCat"})
+	public ModelAndView saveCat(){
+		
+		Category c=new Category();
+		c.setId(1);
+		c.setName("Televison");
+		c.setDescription("This is some descriptions for Televisions!");
+		c.setImageURL("CAT_1.png");
+		boolean b=categoryDAO.add(c);
+		if(b){
+			System.out.println("successfully stored...");
+		}
+		
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title", "Contact Us");
+		mv.addObject("userClicksContact", true);
+		return mv;
+	}
 	
 }
