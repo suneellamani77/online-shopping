@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages={"net.sj.shoppingbackend.dto"})
 @EnableTransactionManagement
 
-public class HibernateConfig {
+public class HibernateConfig {  
 	
 	private  final static String Database_Url="jdbc:h2:tcp://localhost/~/onlineshopping";
 	private final static String Database_Driver="org.h2.Driver";
