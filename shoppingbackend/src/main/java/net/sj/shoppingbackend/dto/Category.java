@@ -7,10 +7,19 @@ public class Category {
 	
 	@Id
 	@GeneratedValue
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="description")
 	private String description;
+	
+	@Column(name="imageURL")
 	private String imageURL;
+	
+	@Column(name="is_active ")
 	private boolean active= true;
 	public int getId() {
 		return id;
@@ -36,6 +45,13 @@ public class Category {
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
 	}
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
 	
 	
 	

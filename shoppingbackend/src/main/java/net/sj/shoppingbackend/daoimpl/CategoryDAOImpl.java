@@ -1,6 +1,5 @@
 package net.sj.shoppingbackend.daoimpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
@@ -14,57 +13,28 @@ import net.sj.shoppingbackend.dto.Category;
 
 
 @Repository("categoryDAO")
+@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+@SuppressWarnings("unchecked")
 public class CategoryDAOImpl implements CategoryDAO{
 	
 	@Autowired
 	private SessionFactory sf;
 	
-	
-	private static List<Category> categories=new ArrayList<Category>();
-	
-	static{
-		
-		Category category=new Category();
-		category.setId(1);
-		category.setName("Televison");
-		category.setDescription("This is some descriptions for Televisions!");
-		category.setImageURL("CAT_1.png");
-		
-		categories.add(category);
-		
-		category=new Category();
-		category.setId(2);
-		category.setName("Mobile");
-		category.setDescription("This is some descriptions for Mobile!");
-		category.setImageURL("CAT_2.png");
-		
-		categories.add(category);
-		
-		category=new Category();
-		category.setId(3);
-		category.setName("Laptop");
-		category.setDescription("This is some descriptions for Laptop!");
-		category.setImageURL("CAT_2.png");
-		
-		categories.add(category);
-		
-	}
 
+	
 	@Override
 	public List<Category> list() {
-		return categories;
+		
+		String selectActiveCategory="FROM Category where active= :active";
+		return sf.getCurrentSession().createQuery(selectActiveCategory).setParameter("active",true).list();
 	}
 
 	@Override
 	public Category get(int id) {
-		
-for (Category category : categories) {
-			if(category.getId()==id) return category;
+		return sf.getCurrentSession().get(Category.class, Integer.valueOf(id));
 		}
-		return null;}
 
 	@Override
-	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 	public boolean add(Category category) {
 		
 		try {
@@ -75,6 +45,30 @@ for (Category category : categories) {
 			System.err.println("exception to store "+e);
 			return false;		
 			}
+	}
+
+	@Override
+	public boolean update(Category category) {
+		try {
+			sf.getCurrentSession().update(category);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean delete(Category category) {
+		category.setActive(false);
+		
+		try {
+			sf.getCurrentSession().update(category);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 }		
