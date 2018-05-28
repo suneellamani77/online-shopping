@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CREATE TABLE category(
 id IDENTITY,
 name VARCHAR(50),
@@ -7,7 +6,7 @@ imageURL VARCHAR(50),
 is_active BOOLEAN,
 CONSTRAINT pk_category_id PRIMARY KEY (id)
 )
-=======
+
 CREATE TABLE category (
 	
 	id IDENTITY,
@@ -35,7 +34,7 @@ CREATE TABLE user_detail (
 	contact_number VARCHAR(15),	
 	CONSTRAINT pk_user_id PRIMARY KEY(id),
 );
->>>>>>> branch 'master' of https://github.com/suneellamani77/online-shopping
+
 
 insert into Category (active, description, imageURL, name, id) 
 values(?, ?, ?, ?, ?)
