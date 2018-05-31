@@ -31,10 +31,10 @@
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     window.menu='${title}';
     window.contextRoot='${contextRoot}';
-    </script>
+    </script> -->
 
   </head>
 
@@ -42,50 +42,46 @@
   
   <div class="wrapper">
 
-    <!-- Navigation -->
-   <%@ include file="./shared/nav.jsp" %>
+  <nav class="navbar navbar-expand-lg navbar-inverse fixed-top">
+      <div class="container" style="display: flow-root">
+      		<div class="navbar-header">
+        		<a class="navbar-brand" href="${contextRoot}/home" id="home">Home</a>
+        	</div>
+        </div>
+        </nav>
    
-   
-
     <!-- Page Content -->
-    
+   
     <div class="content">
-    <c:if test="${userClicksHome==true}">
-    <%@ include file="home.jsp" %>
-    </c:if>
     
-    <!-- when user clicks on about us -->
-    <c:if test="${userClicksAbout==true}">
-    <%@ include file="about.jsp" %>
-    </c:if>
-    
-    <!-- when user clicks on contact us -->
-    <c:if test="${userClicksContact==true}">
-    <%@ include file="contact.jsp" %>
-    </c:if>
-    
-    <!-- when user clicks on All Produts  -->
-    <c:if test="${userClicksAllProducts==true or userClicksCategoryProducts==true}">
-    <%@ include file="listProducts.jsp" %>
-    </c:if>
-    
-    <c:if test="${userClickShowProduct==true}">
-    <%@ include file="singleProduct.jsp" %>
-    </c:if>
+    	<div class="container">
+    			
+    			<div class="row">
+    			
+    				<div class="col-xs-12">
+    				
+    					<div class="jumbotron">
+    					
+    						<h1>${errorTitle}</h1>
+    						<!-- <h1> The Page is not constructed!</h1> -->
+    						<hr/>
+    						
+    						<blockquote style="word-wrap:break-word;">
+    							${errorDescription}
+    						</blockquote>
+    					</div>
+    			
+    				</div>
+    				
+    			</div>
+    			
+    	</div>
     
 	</div>
 
     <!-- Footer -->
    	<%@ include file="./shared/footer.jsp" %>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
-    
- <script src="${js}/jquery.dataTables.js"></script>
- 
-	<!-- Included external js -->
-	 <script src="${js}/myapp.js"></script>
 	</div>
   </body>
 

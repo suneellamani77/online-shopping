@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
 	
@@ -13,6 +15,7 @@ public class Product {
 	private String code;
 	private String name;
 	private String brand;
+	@JsonIgnore
 	private String description;
 	private int quantity;
 	
@@ -20,12 +23,15 @@ public class Product {
 	private double unitPrice;
 	
 	@Column(name="is_active")
+	@JsonIgnore
 	private boolean active=true;
 	
 	@Column(name="category_id")
+	@JsonIgnore
 	private int categoryId;
 	
 	@Column(name="supplier_id")
+	@JsonIgnore
 	private int supplierId;
 	private int purchases;
 	private int views;

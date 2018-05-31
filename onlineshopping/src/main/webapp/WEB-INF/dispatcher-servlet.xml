@@ -13,7 +13,7 @@
    
    
    <context:annotation-config />
-   <context:component-scan base-package="net.sj.onlineshopping.controller" />
+   <context:component-scan base-package="net.sj.onlineshopping" />
    <context:component-scan base-package="net.sj.shoppingbackend" /> 
    
    
