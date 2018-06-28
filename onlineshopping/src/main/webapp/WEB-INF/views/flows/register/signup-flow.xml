@@ -34,7 +34,7 @@
 		
 		
 		<view-state id="billing" view="flows/register/signup-billing" model="billing" >
-			<transition on="personal" to="personal" />
+			<transition on="personal" to="personal" validate="false" />
 			<transition on="confirm" to="confirm" />
 			<on-exit>
 					<evaluate expression="registerHandler.addBilling(flowScope.registerModel , billing)"  />

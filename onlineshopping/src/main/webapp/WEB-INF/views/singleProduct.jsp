@@ -37,7 +37,7 @@
 				<hr/>
 				
 				
-				
+				<sec:authorize access="hasAuthority('USER')">
 				<c:choose>
 				
 					<c:when test="${product.quantity <1}">
@@ -53,6 +53,13 @@
 					&#160;
 					</c:otherwise>
 				</c:choose>
+				</sec:authorize>
+				
+				<sec:authorize access="hasAuthority('ADMIN')">
+				<a href="${contextRoot}/manage/${product.id}/product" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>Edit</a>
+							&#160;
+				</sec:authorize>
+				
 				<a href="${contextRoot}/show/all/products" class="btn btn-primary">Back</a>
 				
 			</div>

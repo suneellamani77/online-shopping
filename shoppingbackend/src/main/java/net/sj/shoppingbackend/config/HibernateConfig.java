@@ -29,7 +29,7 @@ public class HibernateConfig {
 	
 	//////// DataSource Bean ////////////
 	
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDatasource(){
 		
 		BasicDataSource datasource=new BasicDataSource();

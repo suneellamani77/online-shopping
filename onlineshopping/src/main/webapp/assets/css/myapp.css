@@ -108,3 +108,7 @@ input:checked + .slider:before{
 #myCategoryModal{
 	padding-top: 120px;
 }
+
+.table-responsive{
+	overflow-x:inherit; 
+}

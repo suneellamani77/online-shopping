@@ -152,80 +152,89 @@
 		
 		<div class="col-sm-12">
 			
-			<div style="overflow: auto;">
+			
+			<div class="container-fluid">
 				
-				<table id="adminProducutsTable" class="table table-striped table-bordered">
-					<thead>
-						<tr>
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Brand</th>
-						<th>Quantity</th>
-						<th>Unit Price</th>
-						<th>Active</th>
-						<th>Edit</th>
-						</tr>
-					</thead>
+				<div class="table-responsive">
 					
-					<%-- <tbody>
-						<tr>
-						<td>1</td>	
-						<td>
-						<img alt="" src="${contextRoot}/resources/images/PRDABC123DEFX.jpg" class="adminDataTableImg">
-						</td>
-						<td>iPhone 5s</td>
-						<td>apple</td>
-						<td>5</td>
-						<td>18000.00</td>
-						<td>
-							<label class="switch">
-							<input type="checkbox" checked="checked" value="1">
-							<div class="slider"></div>
-							</label>
-						</td>
-						<td>
-						<a href="${contextRoot}/manage/4/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
-						</td>
-						</tr>
-						
-						<tr>
-						<td>4</td>	
-						<td>
-						<img alt="" src="${contextRoot}/resources/images/PRDMNO123PQRX.jpg" class="adminDataTableImg">
-						</td>
-						<td>MackBook PRo</td>
-						<td>apple</td>
-						<td>5</td>
-						<td>54000.00</td>
-						<td>
-							<label class="switch">
-							<input type="checkbox" value="4">
-							<div class="slider"></div>
-							</label>
-						</td>
-						<td>
-						<a href="${contextRoot}/manage/4/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
-						</td>
-						</tr>
-					</tbody> --%>
+						<table id="adminProducutsTable" class="table table-striped table-bordered">
+							<thead>
+								<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Quantity</th>
+								<th>Unit Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+								</tr>
+							</thead>
+							
+							<%-- <tbody>
+								<tr>
+								<td>1</td>	
+								<td>
+								<img alt="" src="${contextRoot}/resources/images/PRDABC123DEFX.jpg" class="adminDataTableImg">
+								</td>
+								<td>iPhone 5s</td>
+								<td>apple</td>
+								<td>5</td>
+								<td>18000.00</td>
+								<td>
+									<label class="switch">
+									<input type="checkbox" checked="checked" value="1">
+									<div class="slider"></div>
+									</label>
+								</td>
+								<td>
+								<a href="${contextRoot}/manage/4/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
+								</td>
+								</tr>
+								
+								<tr>
+								<td>4</td>	
+								<td>
+								<img alt="" src="${contextRoot}/resources/images/PRDMNO123PQRX.jpg" class="adminDataTableImg">
+								</td>
+								<td>MackBook PRo</td>
+								<td>apple</td>
+								<td>5</td>
+								<td>54000.00</td>
+								<td>
+									<label class="switch">
+									<input type="checkbox" value="4">
+									<div class="slider"></div>
+									</label>
+								</td>
+								<td>
+								<a href="${contextRoot}/manage/4/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>
+								</td>
+								</tr>
+							</tbody> --%>
+							
+							
+							<tfoot>
+								<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Brand</th>
+								<th>Quantity</th>
+								<th>Unit Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+								</tr>
+							</tfoot>
+							
+							
+						</table>
 					
-					
-					<tfoot>
-						<tr>
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Brand</th>
-						<th>Quantity</th>
-						<th>Unit Price</th>
-						<th>Active</th>
-						<th>Edit</th>
-						</tr>
-					</tfoot>
-					
-					
-				</table>
+				</div>
+				
+			</div>
+				
+				
 				
 			</div>
 			
@@ -280,4 +289,3 @@
 	</div>
 
 
-</div>

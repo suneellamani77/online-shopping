@@ -17,7 +17,7 @@
    
    <context:annotation-config />
    <context:component-scan base-package="net.sj.onlineshopping" />
-   <context:component-scan base-package="net.sj.shoppingbackend" /> 
+  <!--  <context:component-scan base-package="net.sj.shoppingbackend" />  -->
    
    
    <bean id="viewResolver" 
